@@ -16,9 +16,9 @@ Exercises with java 11. For example String class,  Files class, Collection inter
  <br>
   
 ### String Methods
-* [Using the isBlank method.](#make-a-simple-request-to-a-host-with-http-)
-* [Create a server with http](#create-a-server-with-http-)
-   
+* [Using the isBlank method.](#using-the-isblank-method-)
+* [Using the lines method.](#using-the-lines-method-)
+
 <br>
 
 </details>
@@ -48,8 +48,6 @@ Exercises with java 11. For example String class,  Files class, Collection inter
 ## String Methods 
 
 ### Using the isBlank method [🔝](#index-)
-
-<br>
 
 #### Check if a string has empty spaces
 <details>
@@ -100,6 +98,60 @@ See Also:
 First String : false
 Second String : true
 Third String : true
+
+ ```
+
+<br>
+
+</details>
+
+
+
+<br>
+
+
+
+### Using the lines method [🔝](#index-)
+
+#### Create a Java program to read a string and obtain the content as a stream of lines.
+<details>
+  <summary>See solution</summary>
+ <br>
+
+
+* [lines method exercises](https://howtodoinjava.com/java11/string-to-stream-of-lines/)
+
+#### Code
+ ```java
+import java.util.stream.Stream;
+ 
+public class Main 
+{
+  public static void main(String[] args) 
+  {
+    try
+    {
+      String str = "A \n B \n C \n D"; 
+ 
+      Stream<String> lines = str.lines();
+ 
+      lines.forEach(System.out::println);
+    } 
+    catch (Error e) 
+    {
+      e.printStackTrace();
+    }
+  }
+}
+ ```
+
+#### Console
+ ```java
+A 
+ B 
+ C 
+ D
+
 
  ```
 
