@@ -18,6 +18,7 @@ Exercises with java 11. For example String class,  Files class, Collection inter
 ### String Methods
 * [Using the isBlank method.](#using-the-isblank-method-)
 * [Using the lines method.](#using-the-lines-method-)
+* [Using various methods](#using-various-methods)
 
 <br>
 
@@ -152,6 +153,39 @@ A
  C 
  D
 
+
+ ```
+
+<br>
+
+</details>
+
+<br>
+
+
+
+### Using various methods [🔝](#index-)
+
+#### Extract non-blank deleted lines from a multi-line string.
+<details>
+  <summary>See solution</summary>
+ <br>
+
+
+* [Using various methods](https://www.baeldung.com/java-11-new-features)
+
+#### Code
+ ```java
+String multilineString = "Baeldung helps \n \n developers \n explore Java.";
+List<String> lines = multilineString.lines()
+  .filter(line -> !line.isBlank())
+  .map(String::strip)
+  .collect(Collectors.toList());
+assertThat(lines).containsExactly("Baeldung helps", "developers", "explore Java.");
+ ```
+
+#### Console
+ ```java
 
  ```
 
